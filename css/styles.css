@@ -1,0 +1,187 @@
+/*** IMPORT CUSTOM FONTS ***/
+@font-face {
+  font-family: _Bold;
+  src: url("../fonts/sensation_light/SansationBold.ttf");
+}
+
+@font-face {
+  font-family: _Italic;
+  src: url("../fonts/sensation_light/Sansation_Italic.ttf");
+}
+
+@font-face {
+  font-family: _Regular;
+  src: url("../fonts/sensation_light/Sansation_Regular.ttf");
+}
+
+/*** MAIN RULES ***/
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-size: 1.4rem;
+  background-color: #f3f3f3;
+  font-family: "_Regular", serif;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+section {
+  padding: 5%;
+}
+
+/*** GLOBAL CLASSES ***/
+.underline {
+  text-decoration: underline;
+  text-underline-offset: .5rem;
+}
+
+.transition {
+  transition: ease 1s;
+}
+
+#facebook {
+  color: #3b5998;
+}
+
+#twitter {
+  color: #00acee;
+}
+
+#instagram {
+  color: #C13584;
+}
+
+#youtube {
+  color: #FF0000;
+}
+
+#tiktok {
+  color: #222222;
+}
+
+#discord {
+  color: #5865F2;
+}
+
+/*** HEADER ***/
+.header-nav {
+  background: rgb(0,25,33);
+  background: linear-gradient(45deg, rgba(0,25,33,1) 0%, rgba(176,24,227,1) 62%, rgba(0,178,198,1) 100%);
+  color: #f3f3f3;
+  width: auto;
+}
+
+.header-nav-items {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+}
+
+.header-nav-items a {
+  font-size: 1.5rem;
+  position: relative;
+  transition: transform .4s;
+  display: block;
+}
+
+.header-nav-items a::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+}
+
+.header-nav-items a:hover {
+  transform: translateY(-100%);
+}
+
+.header-nav-items li {
+  margin: 2%;
+  overflow: hidden;
+}
+
+.header-nav-items img {
+  max-height: 108px;
+  width: auto;
+}
+
+/*** INDEX ***/
+#index-container {
+  background-image: url("../img/background-index.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  height: 85vh;
+  position: relative;
+}
+
+#index-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+}
+
+#index-title h1 {
+  font-family: _Bold, serif;
+  font-size: 3.5rem;
+}
+
+#index-title i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+#index-title i:hover {
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+#SM {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 2%;
+  border-bottom: 1px solid black;
+}
+
+.SM-items {
+  display: flex;
+  font-size: 4rem;
+  justify-content: space-around;
+}
+
+#gamemodes-desc {
+  margin-top: 50px;
+}
+
+#gamemodes-desc h2 {
+  text-align: center;
+  font-family: _Bold, serif;
+  font-size: 2.5rem;
+}

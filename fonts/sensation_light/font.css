@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'SansationBold';
+	src: url('./SansationBold.eot');
+	src: local('SansationBold'), url('./SansationBold.woff') format('woff'), url('./SansationBold.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_425">Text with this font applied</p> */
+.fontsforweb_fontid_425 {
+	font-family: 'SansationBold' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
