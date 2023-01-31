@@ -52,6 +52,12 @@ section {
   padding: 5%;
 }
 
+section h2 {
+  text-align: center;
+  font-family: _Bold, serif;
+  font-size: 2.5rem;
+}
+
 /*** GLOBAL CLASSES ***/
 .underline {
   text-decoration: underline;
@@ -84,6 +90,10 @@ section {
 
 #discord {
   color: #5865F2;
+}
+
+.bold {
+  font-family: _Bold, serif;
 }
 
 /*** HEADER ***/
@@ -149,7 +159,7 @@ section {
 
 #index-title h1 {
   font-family: _Bold, serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 #index-title i {
@@ -178,10 +188,105 @@ section {
 
 #gamemodes-desc {
   margin-top: 50px;
+  border-bottom: 1px solid black;
+  padding: 0 5%;
 }
 
-#gamemodes-desc h2 {
+.gamemodes-items {
+  padding: 0;
+}
+
+.gamemodes-items nav {
+  width: 100%;
+  background-color: #d9d9d9;
+  margin: 60px auto;
   text-align: center;
+}
+
+.gamemodes-items-title {
+  padding: 30px;
   font-family: _Bold, serif;
+  background: rgb(235,148,186);
+  background: radial-gradient(circle, rgba(235,148,186,1) 0%, rgba(126,177,237,1) 100%);
+  color: #f3f3f3;
   font-size: 2.5rem;
+  font-variant: small-caps;
+  cursor: pointer;
+  display: block;
+  letter-spacing: .2rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.gamemodes-items-title::after {
+  float: right;
+  right: 10%;
+  content: "+";
+}
+
+.gamemodes-item-expand {
+  clear: both;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  text-align: left;
+  font-size: 1.75rem;
+  transition: max-height 1s linear;
+}
+
+.gamemodes-item-expand p {
+  padding: 1% 2%;
+}
+
+.gamemodes-item {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+}
+
+.gamemodes-item:checked+.gamemodes-item-expand {
+  max-height: 5000px;
+}
+
+#presentation-video {
+  padding: 5%;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+#history {
+  border-bottom: 1px solid black;
+}
+
+#history h2 {
+  text-align: right;
+}
+
+.history-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.history-items div {
+  width: 50%;
+  padding: 1%;
+}
+
+#history-stickers {
+  cursor: pointer;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#history-stickers img {
+  width: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+#history-stickers li:last-of-type img {
+  margin-right: 0;
 }
