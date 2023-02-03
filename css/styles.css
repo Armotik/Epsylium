@@ -55,7 +55,11 @@ section {
 section h2 {
   text-align: center;
   font-family: _Bold, serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  background: rgb(0,182,240);
+  background: -webkit-linear-gradient(45deg, rgba(0,182,240,1) 0%, rgba(233,95,157,1) 43%, rgba(176,24,227,1) 78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*** GLOBAL CLASSES ***/
@@ -162,6 +166,12 @@ section h2 {
   font-size: 3rem;
 }
 
+#index-title h3 {
+  text-align: center;
+  font-family: _Bold, serif;
+  font-size: 3rem;
+}
+
 #index-title i {
   font-size: 2.5rem;
   cursor: pointer;
@@ -261,17 +271,32 @@ section h2 {
 }
 
 #history h2 {
-  text-align: right;
+  text-align: center;
 }
 
-.history-items {
-  display: flex;
-  justify-content: space-around;
+#history p {
+  font-size: 1.75rem;
 }
 
 .history-items div {
+  width: 100%;
+}
+
+#history-main-img {
+  width: 100%;
+}
+
+#history-main-img-figure {
   width: 50%;
-  padding: 1%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#history-main-img-figure figcaption {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid black;
 }
 
 #history-stickers {
@@ -279,14 +304,106 @@ section h2 {
   margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #history-stickers img {
-  width: 5rem;
-  margin-bottom: 0.5rem;
+  width: 15rem;
+  padding: 0.25rem;
 }
 
-#history-stickers li:last-of-type img {
-  margin-right: 0;
+.history-items-history {
+  padding: 0 5%;
+}
+
+#history-quotes {
+  padding: 5%;
+}
+
+#history-quotes ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#history-quotes ul>li {
+  width: 50%;
+}
+
+#history-quotes ul>li>h3 {
+  text-align: center;
+  font-family: _Bold, serif;
+  background: rgb(210,196,38);
+  background: -webkit-linear-gradient(45deg, rgba(210,196,38,1) 0%, rgba(244,184,76,1) 50%, rgba(227,24,50,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#history-quotes ul>li>p {
+  font-family: _Italic, serif;
+  font-size: 1.5rem;
+}
+
+#history-quotes ul>li:last-of-type>p {
+  text-align: right;
+  color: #555555;
+}
+
+/*** FOOTER ***/
+.footer {
+  background: rgb(0,25,33);
+  background: linear-gradient(45deg, rgba(0,25,33,1) 0%, rgba(176,24,227,1) 62%, rgba(0,178,198,1) 100%);
+  color: #f3f3f3;
+  height: 30vh;
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "_Regular", serif;
+  font-size: 2rem;
+  margin: 0;
+  height: 100%;
+}
+
+.footer-items > * {
+  width: 33%;
+}
+
+#footer-logo {
+  max-width: 20%;
+  width: 20%;
+}
+
+.footer-items-contact {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.footer-items-contact li {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-items-extand {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.footer-items-extand li {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-contact-items {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 }
