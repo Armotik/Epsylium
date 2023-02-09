@@ -300,16 +300,19 @@ section h2 {
 }
 
 #history-stickers {
-  cursor: pointer;
   margin-bottom: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
 }
 
 #history-stickers img {
-  width: 15rem;
+  width: 100%;
+  height: 10rem;
   padding: 0.25rem;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .history-items-history {
@@ -320,16 +323,7 @@ section h2 {
   padding: 5%;
 }
 
-#history-quotes ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-#history-quotes ul>li {
-  width: 50%;
-}
-
-#history-quotes ul>li>h3 {
+#history-quotes h3 {
   text-align: center;
   font-family: _Bold, serif;
   background: rgb(210,196,38);
@@ -338,14 +332,9 @@ section h2 {
   -webkit-text-fill-color: transparent;
 }
 
-#history-quotes ul>li>p {
+#history-quotes p {
   font-family: _Italic, serif;
   font-size: 1.5rem;
-}
-
-#history-quotes ul>li:last-of-type>p {
-  text-align: right;
-  color: #555555;
 }
 
 /*** FOOTER ***/
