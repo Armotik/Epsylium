@@ -56,8 +56,8 @@ section h2 {
   text-align: center;
   font-family: _Bold, serif;
   font-size: 3rem;
-  background: rgb(0,182,240);
-  background: -webkit-linear-gradient(45deg, rgba(0,182,240,1) 0%, rgba(233,95,157,1) 43%, rgba(176,24,227,1) 78%);
+  background: rgb(0, 182, 240);
+  background: -webkit-linear-gradient(45deg, rgba(0, 182, 240, 1) 0%, rgba(233, 95, 157, 1) 43%, rgba(176, 24, 227, 1) 78%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -66,6 +66,11 @@ section h2 {
 .underline {
   text-decoration: underline;
   text-underline-offset: .5rem;
+}
+
+.important {
+  color: #FF0000;
+  font-family: _Bold, serif;
 }
 
 .transition {
@@ -102,8 +107,8 @@ section h2 {
 
 /*** HEADER ***/
 .header-nav {
-  background: rgb(0,25,33);
-  background: linear-gradient(45deg, rgba(0,25,33,1) 0%, rgba(176,24,227,1) 62%, rgba(0,178,198,1) 100%);
+  background: rgb(0, 25, 33);
+  background: linear-gradient(45deg, rgba(0, 25, 33, 1) 0%, rgba(176, 24, 227, 1) 62%, rgba(0, 178, 198, 1) 100%);
   color: #f3f3f3;
   width: auto;
 }
@@ -122,7 +127,7 @@ section h2 {
   display: block;
 }
 
-.header-nav-items a::before{
+.header-nav-items a::before {
   content: attr(data-text);
   position: absolute;
   top: 100%;
@@ -216,8 +221,8 @@ section h2 {
 .gamemodes-items-title {
   padding: 30px;
   font-family: _Bold, serif;
-  background: rgb(235,148,186);
-  background: radial-gradient(circle, rgba(235,148,186,1) 0%, rgba(126,177,237,1) 100%);
+  background: rgb(235, 148, 186);
+  background: radial-gradient(circle, rgba(235, 148, 186, 1) 0%, rgba(126, 177, 237, 1) 100%);
   color: #f3f3f3;
   font-size: 2.5rem;
   font-variant: small-caps;
@@ -256,7 +261,7 @@ section h2 {
   height: 0;
 }
 
-.gamemodes-item:checked+.gamemodes-item-expand {
+.gamemodes-item:checked + .gamemodes-item-expand {
   max-height: 5000px;
 }
 
@@ -302,7 +307,6 @@ section h2 {
 #history-stickers {
   margin-bottom: 2rem;
   display: grid;
-
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
 }
@@ -326,8 +330,8 @@ section h2 {
 #history-quotes h3 {
   text-align: center;
   font-family: _Bold, serif;
-  background: rgb(210,196,38);
-  background: -webkit-linear-gradient(45deg, rgba(210,196,38,1) 0%, rgba(244,184,76,1) 50%, rgba(227,24,50,1) 100%);
+  background: rgb(210, 196, 38);
+  background: -webkit-linear-gradient(45deg, rgba(210, 196, 38, 1) 0%, rgba(244, 184, 76, 1) 50%, rgba(227, 24, 50, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -337,10 +341,60 @@ section h2 {
   font-size: 1.5rem;
 }
 
+#rules-desc {
+  padding: 0 15%;
+}
+
+#rules-desc p {
+  line-height: 2.25rem;
+}
+
+#rules-desc p:last-of-type {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid black;
+}
+
+.rules-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.rules-item:last-of-type {
+  grid-column: 2;
+}
+
+.rules-item {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 20px;
+}
+
+.rules-item:hover {
+  transition: .5s;
+  background: #ffffff;
+}
+
+.rules-item h3 {
+  text-align: center;
+  font-family: _Bold, serif;
+}
+
+.rules-item img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 15rem;
+  height: 15rem;
+  padding: 0.25rem;
+  object-fit: cover;
+}
+
 /*** FOOTER ***/
 .footer {
-  background: rgb(0,25,33);
-  background: linear-gradient(45deg, rgba(0,25,33,1) 0%, rgba(176,24,227,1) 62%, rgba(0,178,198,1) 100%);
+  background: rgb(0, 25, 33);
+  background: linear-gradient(45deg, rgba(0, 25, 33, 1) 0%, rgba(176, 24, 227, 1) 62%, rgba(0, 178, 198, 1) 100%);
   color: #f3f3f3;
   height: 30vh;
   width: 100%;

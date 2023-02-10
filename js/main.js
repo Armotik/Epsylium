@@ -1,25 +1,11 @@
 console.log("Running JavaScript ...");
 
-document.getElementById("scroll-icon").addEventListener("click", () => {
-  window.scrollTo({
-    top: document.getElementById("gamemodes-desc").offsetTop,
-    behavior: "smooth"
-  });
+fetch("../views/footer.html").then(response => response.text()).then(data => {
+
+  document.querySelector(".footer").innerHTML = data
 });
 
-document.getElementById("history-stickers").querySelectorAll("img").forEach(e => {
+fetch("../views/header.html").then(response => response.text()).then(data => {
 
-  e.addEventListener("mouseover", figcaptionEvent);
-  e.addEventListener("mouseover", setMainImage);
-})
-
-function figcaptionEvent() {
-
-  document.getElementById("history-main-img-title").innerHTML = this.getAttribute("alt");
-}
-
-function setMainImage() {
-  let name = this.getAttribute("src").split("/")[2];
-  document.getElementById("history-main-img").setAttribute("src", `../img/gallery/${name}`);
-
-}
+  document.querySelector(".header").innerHTML = data
+});
