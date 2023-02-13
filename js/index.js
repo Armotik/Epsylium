@@ -17,7 +17,7 @@ function figcaptionEvent() {
 }
 
 function setMainImage() {
-  let name = this.getAttribute("src").split("/")[2];
+  let name = this.getAttribute("src").split("/")[3];
   document.getElementById("history-main-img").setAttribute("src", `../img/gallery/${name}`);
 
 }

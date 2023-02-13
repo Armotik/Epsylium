@@ -105,6 +105,102 @@ section h2 {
   font-family: _Bold, serif;
 }
 
+.article-desc {
+  padding: 0 15%;
+}
+
+.article-desc p {
+  line-height: 2.25rem;
+}
+
+.article-desc p:last-of-type {
+  padding-bottom: 50px;
+  border-bottom: 1px solid black;
+}
+
+.article-desc h3 {
+  background: rgb(210, 196, 38);
+  background: -webkit-linear-gradient(45deg, rgba(210, 196, 38, 1) 0%, rgba(244, 184, 76, 1) 50%, rgba(227, 24, 50, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: _Italic, serif;
+  font-size: 2rem;
+}
+
+.check-menu-items {
+  padding: 0;
+}
+
+.check-menu-items nav {
+  width: 100%;
+  background-color: #d9d9d9;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.check-menu {
+  padding: 30px;
+  font-family: _Bold, serif;
+  background: rgb(235, 148, 186);
+  background: radial-gradient(circle, rgba(235, 148, 186, 1) 0%, rgba(126, 177, 237, 1) 100%);
+  color: #f3f3f3;
+  font-size: 2.5rem;
+  font-variant: small-caps;
+  cursor: pointer;
+  display: block;
+  letter-spacing: .2rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.check-menu::after {
+  float: right;
+  right: 10%;
+  content: "+";
+}
+
+.check-menu-expand {
+  clear: both;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  text-align: left;
+  font-size: 1.75rem;
+  transition: max-height 1s linear;
+}
+
+.check-menu-expand p {
+  padding: 1% 2%;
+}
+
+.check-menu-item {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+}
+
+.check-menu-item:checked + .check-menu-expand {
+  max-height: 5000px;
+}
+
+.littleTitle {
+  text-align: center;
+  font-family: _Bold, serif;
+  background: rgb(210, 196, 38);
+  background: -webkit-linear-gradient(45deg, rgba(210, 196, 38, 1) 0%, rgba(244, 184, 76, 1) 50%, rgba(227, 24, 50, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.grid-center {
+  grid-column: 2;
+}
+
 /*** HEADER ***/
 .header-nav {
   background: rgb(0, 25, 33);
@@ -207,64 +303,6 @@ section h2 {
   padding: 0 5%;
 }
 
-.gamemodes-items {
-  padding: 0;
-}
-
-.gamemodes-items nav {
-  width: 100%;
-  background-color: #d9d9d9;
-  margin: 60px auto;
-  text-align: center;
-}
-
-.gamemodes-items-title {
-  padding: 30px;
-  font-family: _Bold, serif;
-  background: rgb(235, 148, 186);
-  background: radial-gradient(circle, rgba(235, 148, 186, 1) 0%, rgba(126, 177, 237, 1) 100%);
-  color: #f3f3f3;
-  font-size: 2.5rem;
-  font-variant: small-caps;
-  cursor: pointer;
-  display: block;
-  letter-spacing: .2rem;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.gamemodes-items-title::after {
-  float: right;
-  right: 10%;
-  content: "+";
-}
-
-.gamemodes-item-expand {
-  clear: both;
-  width: 100%;
-  max-height: 0;
-  overflow: hidden;
-  text-align: left;
-  font-size: 1.75rem;
-  transition: max-height 1s linear;
-}
-
-.gamemodes-item-expand p {
-  padding: 1% 2%;
-}
-
-.gamemodes-item {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-}
-
-.gamemodes-item:checked + .gamemodes-item-expand {
-  max-height: 5000px;
-}
-
 #presentation-video {
   padding: 5%;
   text-align: center;
@@ -327,43 +365,15 @@ section h2 {
   padding: 5%;
 }
 
-#history-quotes h3 {
-  text-align: center;
-  font-family: _Bold, serif;
-  background: rgb(210, 196, 38);
-  background: -webkit-linear-gradient(45deg, rgba(210, 196, 38, 1) 0%, rgba(244, 184, 76, 1) 50%, rgba(227, 24, 50, 1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 #history-quotes p {
   font-family: _Italic, serif;
   font-size: 1.5rem;
-}
-
-#rules-desc {
-  padding: 0 15%;
-}
-
-#rules-desc p {
-  line-height: 2.25rem;
-}
-
-#rules-desc p:last-of-type {
-  text-align: center;
-  margin-top: 50px;
-  padding-bottom: 50px;
-  border-bottom: 1px solid black;
 }
 
 .rules-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-}
-
-.rules-item:last-of-type {
-  grid-column: 2;
 }
 
 .rules-item {
@@ -382,6 +392,11 @@ section h2 {
   font-family: _Bold, serif;
 }
 
+#rules-desc p:last-of-type {
+  text-align: center;
+  margin-top: 50px;
+}
+
 .rules-item img {
   margin-left: auto;
   margin-right: auto;
@@ -389,6 +404,33 @@ section h2 {
   height: 15rem;
   padding: 0.25rem;
   object-fit: cover;
+}
+
+/*** THANKS ***/
+#thanks ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 60%;
+  font-size: 2rem;
+  padding: 5%;
+  border-bottom: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#thanks ul>* {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 33%;
+  padding: 1%;
+}
+
+#thanks p {
+  font-size: 2rem;
+  padding: 2% 5%;
+  text-align: center;
 }
 
 /*** FOOTER ***/
